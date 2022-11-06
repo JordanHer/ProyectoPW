@@ -166,7 +166,7 @@ nav {
         grid-template-rows: 0.5fr 0.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
         grid-template-areas:
             "nav"
-            "subtitle"
+            "nav_catalogo"
             "content1"
             "content2"
             "content3"
