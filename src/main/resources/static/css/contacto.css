@@ -1,0 +1,139 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 8 nov. 2022, 16:58:01
+    Author     : andre
+*/
+:root {
+  --main-radius: 5px;
+  --main-padding: 5px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.1fr 1.5fr 0.4fr 1.2fr 0.8fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "nav_catalogo nav_catalogo nav_catalogo nav_catalogo"
+    "main main main main"
+    "equipo equipo equipo equipo"
+    "miembro1 miembro2 miembro3 miembro4"
+    "footer footer footer footer";
+  grid-gap: 0.5rem;
+  font-weight: 800;
+  font-size: 12px;
+  color: black;
+  text-align: center;
+}
+
+nav {
+  background: black;
+  color: white;
+  grid-area: nav;
+  font-size: 15px;
+  text-transform: uppercase;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#nav_catalogo {
+  background: #a6a6a6;
+  grid-area: nav_catalogo;
+  font-size: 10px;
+  color: white;
+  text-transform: uppercase;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+main {
+  grid-area: main;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#titulo_ad {
+  text-transform: uppercase;
+}
+
+#equipo {
+  grid-area: equipo;
+  text-transform: uppercase;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#miembro1 {
+  background: #BDBDBD;
+  grid-area: miembro1;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#miembro2 {
+  background: #BDBDBD;
+  grid-area: miembro2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#miembro3 {
+  background: #BDBDBD;
+  grid-area: miembro3;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#miembro4 {
+  background: #BDBDBD;
+  grid-area: miembro4;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 60%;
+  margin-bottom: 1px;
+  font-family: "Poppins", sans-serif;
+}
+
+footer {
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+
+
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.1fr 2.2fr 0.4fr 1.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "nav_catalogo"
+      "main"
+      "equipo"
+      "miembro1"
+      "miembro2"
+      "miembro3"
+      "miembro4"
+      "footer";
+  }
+}
