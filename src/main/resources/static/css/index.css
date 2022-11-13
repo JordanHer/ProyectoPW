@@ -66,8 +66,9 @@ body {
   color: black;
 }
 
-#boton1 {
+a {
   margin-left: 40px;
+  text-transform: none;
 }
 
 #con1 {
