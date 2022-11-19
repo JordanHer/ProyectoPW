@@ -19,10 +19,11 @@ body {
     display: grid;
     height: 120vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 60px 40px 1fr 1fr 1fr;
+    grid-template-rows: 60px 35px 0.08fr 1fr 1fr 1fr;
     grid-template-areas:
         "nav nav nav nav"
         "nav2 nav2 nav2 nav2"
+        "nav3 nav3 nav3 nav3"
         "content1 content2  content3 content4"
         "content5  content6 content7 content8"
         "content9  content10 content11 content12";
@@ -34,7 +35,6 @@ body {
 }
 
 #nav23 {
-
   text-align: left;
   background: black;
   grid-area: nav;
@@ -47,6 +47,14 @@ body {
 #nav24 {
   background: #cccccc;
   grid-area: nav2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#nav3 {
+  background: none;
+  color: black;
+  grid-area: nav3;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 }
@@ -220,10 +228,11 @@ body {
 @media only screen and (max-width: 550px) {
     .container {
         grid-template-columns: 1fr;
-        grid-template-rows: 0.5fr 0.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
         grid-template-areas:
             "nav"
-            "nav_catalogo"
+            "nav2"
+            "nav3"
             "content1"
             "content2"
             "content3"
