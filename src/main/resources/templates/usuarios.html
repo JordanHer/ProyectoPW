@@ -1,15 +1,72 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
+
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>TODO supply a title</title>
+        <title>PARALLAX | Usuarios</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/usuario.css" />
     </head>
     <body>
-        <div>TODO write content</div>
+        <div class="container23">
+
+            <nav id="nav23">
+
+                <a id="logoprincipal" href="index.html">PARALLAX</a>
+                <a id="btn_inicio" href="index.html">Inicio</a>
+                <a id="btn_contacto" href="index.html">Contacto</a>
+                <img onclick="location.href='carrito.html'" id="img_carrito" src="imagenes/carrito.PNG" alt="alt"/>
+                <a id="btn_usuario" href="index.html">* Aca va el nombre del usuario</a>
+            </nav>
+
+            <nav id="nav24">
+                <a id="btn_usuarios" href="/usuario">Usuarios</a>
+                <a id="btn_ventas" href="/ventas">Ventas</a>
+            </nav>
+
+            <div id="con1">
+
+                <h1 th:text="${titulo}"></h1>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Primer Apellido</th>
+                            <th scope="col">Segundo Apellido</th>
+                            <th scope="col">Correo</th>
+                            <th scope="col">Contrasena</th>
+                            <th scope="col">Rol</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <th:block th:each="user : ${usuarios}">
+                        <tr>
+                            <td th:text="${user.getNombre}"></td>
+                            <td th:text="${user.getApellido1}"></td>
+                            <td th:text="${user.getApellido2}"></td>
+                            <td th:text="${user.getCorreo}"></td>
+                            <td th:text="${user.getContrasena}"></td>
+                            <td th:text="${user.getRol}"></td>
+                            <td>
+                                <a th:href="@{/editUsuario/{id}(id=${user.getId})}">Editar</a>
+                            </td>
+                            <td>
+                                <a th:href="@{/delete/{id}(id=${user.getId})}">Eliminar</a>
+                            </td>
+                        </tr>
+                    </th:block>>
+                    </tbody>
+                </table>
+                <button onclick="location.href='usuarioN'" type="button" class="btn btn-success">Agregar Usuario</button>
+            </div>
+            <div id="con2"></div>
+        </div>
     </body>
 </html>
+

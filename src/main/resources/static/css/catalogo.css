@@ -17,12 +17,12 @@ body {
 
 .container {
     display: grid;
-    height: 150vh;
+    height: 120vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.15fr 0.1fr 1fr 1fr 1fr;
+    grid-template-rows: 60px 40px 1fr 1fr 1fr;
     grid-template-areas:
         "nav nav nav nav"
-        "nav_catalogo nav_catalogo nav_catalogo nav_catalogo"
+        "nav2 nav2 nav2 nav2"
         "content1 content2  content3 content4"
         "content5  content6 content7 content8"
         "content9  content10 content11 content12";
@@ -33,22 +33,79 @@ body {
     text-align: center;
 }
 
-nav {
-    background: #000000;
-    grid-area: nav;
-    font-size: 16px;
-    text-transform: uppercase;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+#nav23 {
+
+  text-align: left;
+  background: black;
+  grid-area: nav;
+  font-size: 35px;
+  color: white;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
 }
 
-#nav_catalogo {
-    background: #a6a6a6;
-    grid-area: nav_catalogo;
-    font-size: 8px;
-    text-transform: uppercase;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+#nav24 {
+  background: #cccccc;
+  grid-area: nav2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#img_carrito {
+    position: absolute;
+    right: 425px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+#btn_usuario {
+    position: absolute;
+    right: 170px;
+    top: 27px;
+    font-size: 15px;
+    outline: none;
+    text-decoration: none;
+    color: white;
+}
+
+#btn_inicio{
+    margin-left: 50px;
+    font-size: 15px;
+    outline: none;
+    text-decoration: none;
+    color: white;
+}
+
+#btn_contacto{
+    margin-left: 20px;
+    font-size: 15px;
+    outline: none;
+    text-decoration: none;
+    color: white;
+}
+
+#btn_hombre{
+    
+    font-size: 15px;
+    outline: none;
+    text-decoration: none;
+    color: black;
+}
+
+#btn_mujer{
+   margin-left: 20px;
+    font-size: 15px;
+    outline: none;
+    text-decoration: none;
+    color: black;
+}
+
+#logoprincipal{
+    margin-left: 50px;
+    outline: none;
+    text-decoration: none;
+    color: white;
 }
 
 #content1 {

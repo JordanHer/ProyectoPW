@@ -1453,6 +1453,7 @@ progress{
     --bs-table-active-bg:rgba(0, 0, 0, 0.1);
     --bs-table-hover-color:#212529;
     --bs-table-hover-bg:rgba(0, 0, 0, 0.075);
+    margin-top: 70px;
     width:100%;
     margin-bottom:1rem;
     color:#212529;
@@ -2579,6 +2580,8 @@ textarea.form-control-lg{
     border-color:#dc3545
 }
 .btn-light{
+    
+    margin-left: 650px;
     color:#000;
     background-color:#f8f9fa;
     border-color:#f8f9fa
