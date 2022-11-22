@@ -52,7 +52,7 @@ public class UsuarioController {
        
         model.addAttribute("usuario", usuario);
         
-        return "crear";
+        return "crear_usuario";
     }
 
     @GetMapping("/delete/{id}")
