@@ -11,12 +11,12 @@ body {
   display: grid;
   height: 120vh;
   
-  grid-template-columns: 1fr 1fr 1fr 0.6fr;
+  grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
   grid-template-rows: 60px 40px 2fr 0.5fr;
   grid-template-areas:
     "nav nav nav nav"
     "nav2 nav2 nav2 nav2"
-    "con1 con1 con1 con2"
+    "con1 con1 con2 con2"
     "footer footer footer footer";
   grid-gap: 0.3rem;
   font-weight: 800;
@@ -26,10 +26,22 @@ body {
   text-align: center;
 }
 
-#img_carrito{
-    margin-left: 500px;
+#img_carrito {
+    position: absolute;
+    right: 325px;
+    top: 10px;
     width: 40px;
     height: 40px;
+}
+
+#btn_usuario {
+    position: absolute;
+    right: 50px;
+    top: 27px;
+    font-size: 15px;
+    outline: none;
+    text-decoration: none;
+    color: white;
 }
 
 #btn_inicio{
@@ -51,6 +63,7 @@ body {
     
     font-size: 15px;
     outline: none;
+    text-decoration: none;
     color: black;
 }
 
@@ -60,14 +73,6 @@ body {
     outline: none;
     text-decoration: none;
     color: black;
-}
-
-#btn_usuario{
-    margin-left: 20px;
-    font-size: 15px;
-    outline: none;
-    text-decoration: none;
-    color: white;
 }
 
 #logoprincipal{
@@ -89,10 +94,7 @@ body {
 }
 
 #nav24 {
-  
   background: #cccccc;
-  
-  
   grid-area: nav2;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
@@ -130,6 +132,8 @@ body {
   background: #88ff40;
   color: black;
   width: 40%;
+  margin-top: 0.25%;
+  margin-bottom: 10%;
 }
 
 #img_hombre {
