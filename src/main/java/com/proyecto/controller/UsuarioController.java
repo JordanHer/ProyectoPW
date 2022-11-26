@@ -29,7 +29,7 @@ public class UsuarioController {
 
     }
 
-    @GetMapping("/usuarioN")
+    @GetMapping("/usuarioNAdministrador")
     public String crearUsuario(Model model) {
         
         
@@ -39,11 +39,28 @@ public class UsuarioController {
         return "crear_usuario";
 
     }
+    
+    @GetMapping("/usuarioNCliente")
+    public String crearUsuario2(Model model) {
+        
+        
+        model.addAttribute("usuario", new Usuario());
+        
+        
+        return "login";
+
+    }
 
     @PostMapping("/save")
-    public String guardarUsuario(@ModelAttribute Usuario usuario) {
+    public String guardarUsuarioAdministrador(@ModelAttribute Usuario usuario) {
         usuarioService.saveUsuario(usuario);
         return "redirect:/usuario";
+    }
+    
+    @PostMapping("/save2")
+    public String guardarUsuarioCliente(@ModelAttribute Usuario usuario) {
+        usuarioService.saveUsuario(usuario);
+        return "redirect:/home.html";
     }
 
     @GetMapping("/editUsuario/{id}")
