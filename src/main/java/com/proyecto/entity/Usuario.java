@@ -16,7 +16,7 @@ import javax.persistence.Table;
 public class Usuario implements Serializable {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //esto lo que esta diciendo es que cuando nosotros agregemos un usuario desde nuestra aplicacion por ejemplo Jordan cuando le damos guardar lo que va a hacer es que no tengamos que generar el ID porque se hace por default
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nombre;
     private String apellido1;

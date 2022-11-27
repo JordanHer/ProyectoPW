@@ -13,13 +13,12 @@ import javax.persistence.Table;
 public class Producto {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //esto lo que esta diciendo es que cuando nosotros agregemos un usuario desde nuestra aplicacion por ejemplo Jordan cuando le damos guardar lo que va a hacer es que no tengamos que generar el ID porque se hace por default
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private long id;
     
     private String nombre;
     private String descripcion;
     private float precio;
-    private String talla;
 
     public long getId() {
         return id;
@@ -52,12 +51,5 @@ public class Producto {
     public void setPrecio(float precio) {
         this.precio = precio;
     }
-
-    public String getTalla() {
-        return talla;
-    }
-
-    public void setTalla(String talla) {
-        this.talla = talla;
-    }
+    
 }
