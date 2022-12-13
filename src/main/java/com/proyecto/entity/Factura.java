@@ -11,19 +11,22 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "facturas")
-public class Factura {
+@Table(name = "facturas2")
+public class Factura implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private long id;
     private long cantidad;
-    private String direccion;
+    private String nombre;
+    private String apellido1;
+    private String apellido2;
+    private String direccion1;
+    private String direccion2;
     private String correo;
+    private long codigopostal;
     
-    @ManyToOne
-    @JoinColumn (name="usuarios_id")
-    private Usuario usuario;
+    
 
     public long getId() {
         return id;
@@ -41,12 +44,44 @@ public class Factura {
         this.cantidad = cantidad;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido1() {
+        return apellido1;
+    }
+
+    public void setApellido1(String apellido1) {
+        this.apellido1 = apellido1;
+    }
+
+    public String getApellido2() {
+        return apellido2;
+    }
+
+    public void setApellido2(String apellido2) {
+        this.apellido2 = apellido2;
+    }
+
+    public String getDireccion1() {
+        return direccion1;
+    }
+
+    public void setDireccion1(String direccion1) {
+        this.direccion1 = direccion1;
+    }
+
+    public String getDireccion2() {
+        return direccion2;
+    }
+
+    public void setDireccion2(String direccion2) {
+        this.direccion2 = direccion2;
     }
 
     public String getCorreo() {
@@ -57,11 +92,15 @@ public class Factura {
         this.correo = correo;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
+    public long getCodigopostal() {
+        return codigopostal;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setCodigopostal(long codigopostal) {
+        this.codigopostal = codigopostal;
     }
+
+   
+
+    
 }

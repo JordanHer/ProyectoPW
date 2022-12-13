@@ -38,34 +38,29 @@
                             <th scope="col">Nombre</th>
                             <th scope="col">Primer Apellido</th>
                             <th scope="col">Segundo Apellido</th>
+                            <th scope="col">Descripcion 1</th>
+                            <th scope="col">Descripcion 2</th>
                             <th scope="col">Correo</th>
-                            <th scope="col">Contrasena</th>
-                            <th scope="col">Rol</th>
-                            <th scope="col">Editar</th>
-                            <th scope="col">Eliminar</th>
+                            <th scope="col">Codigo Postal</th>
+                           
                         </tr>
                     </thead>
                     <tbody>
-                    <th:block th:each="user : ${usuarios}">
+                    <th:block th:each="user : ${facturas}">
                         <tr>
                             <td th:text="${user.getNombre}"></td>
                             <td th:text="${user.getApellido1}"></td>
                             <td th:text="${user.getApellido2}"></td>
-                            <td th:text="${user.getUsername}"></td>
-                            <td th:text="${user.getPassword}"></td>
-                            <td th:text="${user.getRol}"></td>
-                            <td>
-                                <a th:href="@{/editUsuario/{id}(id=${user.getId})}">Editar</a>
-                            </td>
-                            <td>
-                                <a th:href="@{/delete/{id}(id=${user.getId})}">Eliminar</a>
-                            </td>
+                            <td th:text="${user.getDescripcion1}"></td>
+                            <td th:text="${user.getDescripcion2}"></td>
+                            <td th:text="${user.getCorreo}"></td>
+                            <td th:text="${user.getCodigopostal}"></td>
+                            
                         </tr>
                     </th:block>>
                     </tbody>
                 </table>
-                <button onclick="location.href='usuarioNAdministrador'" type="button" class="btn btn-success">Agregar Usuario</button>
-            </div>
+                </div>
             <div id="con2"></div>
         </div>
     </body>

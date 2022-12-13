@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>PARALLAX | Carrito</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/checkout.css" />
+    </head>
+    <body>
+        <div class="container23">
+
+            <nav id="nav23">
+
+                <a id="logoprincipal" href="index.html">PARALLAX</a>
+                <a id="btn_inicio" href="index.html">Inicio</a>
+                <a id="btn_contacto" href="index.html">Contacto</a>
+                <img onclick="location.href='carritodecompras'" id="img_carrito" src="imagenes/carrito.PNG" alt="alt"/>
+                <a id="btn_usuario" href="index.html">* Aca va el nombre del usuario</a>
+            </nav>
+
+            <nav id="nav24">
+                <a id="btn_hombre" href="hombre.html">Hombre</a>
+                <a id="btn_mujer" href="mujer.html">Mujer</a>
+            </nav>
+
+            <div id="con1">
+                <div class="card-header bg-black text-white"> 
+                </div>            
+                <div class="card-body">
+                    <!-------------------Esto es un Formulario--------------- -->                
+                    <div class="container">                    
+                        <form th:object = "${factura}"                          
+                              th:action="@{/saveFac}"                          
+                              method="POST"
+                              >                        
+                            <input type="hidden" th:field="*{id}">    
+                            
+                            <div class="form-group mb-3 row">                            
+                                <label  class="form-control-sm  col-form-label col-md-2" for="rol"></label>                            
+                                <div class="col-sm-10">                                
+                                    <select th:field="*{cantidad}" class="form-control form-control-sm col-md-6" id="Rol">  
+                                        <option value='5'>5</option>
+                                        
+                                    </select>
+                                </div>                        
+                            </div> 
+                            <div class="form-group mb-3 row">                            
+                                <label  class="col-md-2 col-form-label" for="nombre"></label>                            
+                                <div class="col-sm-10">                                
+                                    <input required type="text" class="form-control form-control-sm col-md-6" th:field="*{nombre}"  placeholder= "Nombre" id="nombres" aria-describedby="emailHelp">                            
+                                </div>                        
+                            </div>                        
+                            <div class="form-group mb-3 row">                            
+                                <label  class="form-control-sm col-md-2  col-form-label" for="apellido1"></label>                           
+                                <div class="col-sm-10">                                
+                                    <input required type="text" th:field="*{apellido1}" class="form-control form-control-sm col-md-6" placeholder= "Primer Apellido" id="apellido1" aria-describedby="emailHelp">                            
+                                </div>                        
+                            </div>
+                            <div class="form-group mb-3 row">                            
+                                <label  class="form-control-sm col-md-2  col-form-label" for="apellido2"></label>                           
+                                <div class="col-sm-10">                                
+                                    <input required type="text" th:field="*{apellido2}" class="form-control form-control-sm col-md-6" placeholder= "Segundo Apellido Apellido" id="apellido2" aria-describedby="emailHelp">                            
+                                </div>                        
+                            </div> 
+                            <div class="form-group mb-3 row">                            
+                                <label  class="form-control-sm col-md-2  col-form-label" for="apellido1"></label>                           
+                                <div class="col-sm-10">                                
+                                    <input required type="text" th:field="*{direccion1}" class="form-control form-control-sm col-md-6" placeholder= "Direccion 1" id="apellido1" aria-describedby="emailHelp">                            
+                                </div>                        
+                            </div>
+                            <div class="form-group mb-3 row">                            
+                                <label  class="form-control-sm col-md-2  col-form-label" for="apellido2"></label>                           
+                                <div class="col-sm-10">                                
+                                    <input required type="text" th:field="*{direccion2}" class="form-control form-control-sm col-md-6" placeholder= "Direccion 2" id="apellido2" aria-describedby="emailHelp">                            
+                                </div>                        
+                            </div> 
+                            <div class="form-group mb-3 row">                            
+                                <label  class="form-control-sm col-md-2  col-form-label" for="apellido2"></label>                           
+                                <div class="col-sm-10">                                
+                                    <input required type="email" th:field="*{correo}" class="form-control form-control-sm col-md-6" placeholder= "Correo Electronico" id="apellido2" aria-describedby="emailHelp">                            
+                                </div>                        
+                            </div> 
+                            <div class="form-group mb-3 row">                            
+                                <label  class="form-control-sm col-form-label col-md-2" for="apellido2"></label>                            
+                                <div class="col-sm-10">                                
+                                    <input required type="integer" th:field="*{codigopostal}" class="form-control form-control-sm col-md-6" placeholder= "Ingrese el codigo Postal" id="apellido2" aria-describedby="emailHelp">                            
+                                </div>                        
+                            </div>
+                            
+                            
+                            <div>          
+                                <button type="submit" class="btn btn-success" value="Guardar">Agregar</button>
+                                <button type="reset" class="btn btn-danger" value="Resetear">Resetear</button>    
+                            </div>
+                        </form>               
+                    </div>            
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>
