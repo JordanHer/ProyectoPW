@@ -50,8 +50,8 @@
                             <td th:text="${user.getNombre}"></td>
                             <td th:text="${user.getApellido1}"></td>
                             <td th:text="${user.getApellido2}"></td>
-                            <td th:text="${user.getCorreo}"></td>
-                            <td th:text="${user.getContrasena}"></td>
+                            <td th:text="${user.getUsername}"></td>
+                            <td th:text="${user.getPassword}"></td>
                             <td th:text="${user.getRol}"></td>
                             <td>
                                 <a th:href="@{/editUsuario/{id}(id=${user.getId})}">Editar</a>

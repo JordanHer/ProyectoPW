@@ -25,23 +25,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             </main>
 
             <div id="con1">
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Contrasena</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                        <div id="emailHelp" class="form-text">No comparta esta informacion con nadie.</div>
-
-                    </div>
-
-                    <a href="home.html">Ingreso</a>
-
-
-                </form>
-
+              <h2 th:text="#{login.login}" style="text-align: center">Login</h2>            
+            <form method="POST" th:action="@{/login}">
+                <label for="username" th:text="#{login.username}">Username:</label><br/>
+                <input type="text" name="username" id="username"/>
+                <br/><br/>
+                <label for="password" th:text="#{login.password}">Password</label><br/>
+                <input type="password" name="password" id="password"/>
+                <br/><br/>
+                <button type="submit" value="Login" th:text="#{login.login}">Login</button>
+            </form>
+<!--
             </div>
             <div id="con2">
                 <form th:object = "${usuario}"                          
@@ -94,7 +88,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     </div>
                 </form>
             </div>
-
+-->
             <footer id="footer23"></footer>
         </div>
     </body>
