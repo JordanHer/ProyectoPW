@@ -16,17 +16,26 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <body>
         <div class="container23"> 
             <nav id="nav23">
+
                 <a id="logoprincipal" href="index.html">PARALLAX</a>
-
+                <a id="btn_inicio" href="login">Inicio</a>
+                <a id="btn_contacto" href="contacto.html">Contacto</a>
+                <button onclick="location.href='usuarioNCliente'" type="button" class="btn btn-light" id="boton02">Ingreso / Registro</button>
             </nav>
-
-            <main id="main23">
-
-            </main>
-
+            
             <div id="con1">
-              <h2 th:text="#{login.login}" style="text-align: center">Login</h2>            
-            <form method="POST" th:action="@{/login}">
+                <div class="acomodar">
+                    <h2 id="titulo01">Estar más allá de la moda, ese es nuestro arquetipo de estilo.</h2>
+                    <button onclick="location.href='contacto.html'" type="button" class="btn btn-secondary" id="boton01">Mas sobre nosotros</button>
+
+                </div>
+
+            </div>
+
+            <div id="con2">
+                         
+            <form id="formlogin" method="POST" th:action="@{/login}">
+                <h2 th:text="#{login.login}" style="text-align: center">Login</h2> 
                 <label for="username" th:text="#{login.username}">Username:</label><br/>
                 <input type="text" name="username" id="username"/>
                 <br/><br/>
@@ -35,60 +44,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <br/><br/>
                 <button type="submit" value="Login" th:text="#{login.login}">Login</button>
             </form>
-<!--
-            </div>
-            <div id="con2">
-                <form th:object = "${usuario}"                          
-                      th:action="@{/save2}"                          
-                      method="POST"
-                      >                        
-                    <input type="hidden" th:field="*{id}">                        
-                    <div class="form-group mb-3 row">                            
-                        <label  class="col-md-2 col-form-label" for="nombre"></label>                            
-                        <div class="col-sm-10">                                
-                            <input required type="text" class="form-control form-control-sm col-md-6" th:field="*{nombre}"  placeholder= "Nombre" id="nombres" aria-describedby="emailHelp">                            
-                        </div>                        
-                    </div>                        
-                    <div class="form-group mb-3 row">                            
-                        <label  class="form-control-sm col-md-2  col-form-label" for="apellido1"></label>                           
-                        <div class="col-sm-10">                                
-                            <input required type="text" th:field="*{apellido1}" class="form-control form-control-sm col-md-6" placeholder= "Primer Apellido" id="apellido1" aria-describedby="emailHelp">                            
-                        </div>                        
-                    </div>                        
-                    <div class="form-group mb-3 row">                            
-                        <label  class="form-control-sm col-form-label col-md-2" for="apellido2"></label>                            
-                        <div class="col-sm-10">                                
-                            <input required type="text" th:field="*{apellido2}" class="form-control form-control-sm col-md-6" placeholder= "Segundo Apellido" id="apellido2" aria-describedby="emailHelp">                            
-                        </div>                        
-                    </div>                        
-                    <div class="form-group mb-3 row">                            
-                        <label  class="form-control-sm col-form-label col-md-2" for="correo"></label>                            
-                        <div class="col-sm-10">                                
-                            <input required type="email" th:field="*{correo}" class="form-control form-control-sm col-md-6" placeholder= "Direccion de correo" id="correo" aria-describedby="emailHelp">                            
-                        </div>                        
-                    </div>                       
-                    <div class="form-group mb-3 row">                            
-                        <label  class="form-control-sm  col-form-label col-md-2" for="contrasena"></label>                            
-                        <div class="col-sm-10">                                
-                            <input required type="text" th:field="*{contrasena}" class="form-control form-control-sm col-md-6" placeholder= "Contrasena" id="Contrasena" aria-describedby="emailHelp">                            
-                        </div>                        
-                    </div>
-                    <div class="form-group mb-3 row">                            
-                        <label  class="form-control-sm  col-form-label col-md-2" for="rol"></label>                            
-                        <div class="col-sm-10">                                
-                            <select th:field="*{rol}" class="form-control form-control-sm col-md-6" id="Rol">  
-                                <option value='Cliente'>Cliente</option>
 
-                            </select>
-                        </div>                        
-                    </div> 
-                    <div>          
-                        <button type="submit" class="btn btn-success" value="Guardar">Agregar</button>
-                        <button type="reset" class="btn btn-danger" value="Resetear">Resetear</button>    
-                    </div>
-                </form>
-            </div>
--->
             <footer id="footer23"></footer>
         </div>
     </body>

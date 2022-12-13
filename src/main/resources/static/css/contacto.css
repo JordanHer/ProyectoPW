@@ -44,6 +44,16 @@ nav {
   padding-top: var(--main-padding);
 }
 
+#nav23 {
+  text-align: left;
+  background: black;
+  grid-area: nav;
+  font-size: 35px;
+  color: white;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
 #nav_catalogo {
   background: #a6a6a6;
   grid-area: nav_catalogo;
