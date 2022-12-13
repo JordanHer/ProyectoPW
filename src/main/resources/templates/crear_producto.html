@@ -23,9 +23,8 @@
             </nav>
 
             <nav id="nav24">
-                <a id="btn_usuarios" href="/usuario">Usuarios</a>
-                <a id="btn_ventas" href="/ventas">Ventas</a>
-                <a id="btn_producto" href="/producto">Productos</a>
+                <a id="btn_hombre" href="/usuario">Usuarios</a>
+                <a id="btn_mujer" href="/ventas">Ventas</a>
             </nav>
 
             <div id="con1">
@@ -35,50 +34,30 @@
                 <div class="card-body">
                     <!-------------------Esto es un Formulario--------------- -->                
                     <div class="container">                    
-                        <form th:object = "${usuario}"                          
-                              th:action="@{/save}"                          
+                        <form th:object = "${producto}"                          
+                              th:action="@{/savePro}"                          
                               method="POST"
                               >                        
                             <input type="hidden" th:field="*{id}">                        
                             <div class="form-group mb-3 row">                            
                                 <label  class="col-md-2 col-form-label" for="nombre"></label>                            
                                 <div class="col-sm-10">                                
-                                    <input required type="text" class="form-control form-control-sm col-md-6" th:field="*{nombre}"  placeholder= "Nombre" id="nombres" aria-describedby="emailHelp">                            
+                                    <input required type="text" class="form-control form-control-sm col-md-6" th:field="*{nombre}"  placeholder= "Nombre del producto" id="nombres" aria-describedby="emailHelp">                            
                                 </div>                        
                             </div>                        
                             <div class="form-group mb-3 row">                            
                                 <label  class="form-control-sm col-md-2  col-form-label" for="apellido1"></label>                           
                                 <div class="col-sm-10">                                
-                                    <input required type="text" th:field="*{apellido1}" class="form-control form-control-sm col-md-6" placeholder= "Primer Apellido" id="apellido1" aria-describedby="emailHelp">                            
+                                    <input required type="text" th:field="*{descripcion}" class="form-control form-control-sm col-md-6" placeholder= "Descripcion" id="apellido1" aria-describedby="emailHelp">                            
                                 </div>                        
                             </div>                        
                             <div class="form-group mb-3 row">                            
                                 <label  class="form-control-sm col-form-label col-md-2" for="apellido2"></label>                            
                                 <div class="col-sm-10">                                
-                                    <input required type="text" th:field="*{apellido2}" class="form-control form-control-sm col-md-6" placeholder= "Segundo Apellido" id="apellido2" aria-describedby="emailHelp">                            
+                                    <input required type="number" th:field="*{precio}" class="form-control form-control-sm col-md-6" placeholder= "Precio" id="apellido2" aria-describedby="emailHelp">                            
                                 </div>                        
                             </div>                        
-                            <div class="form-group mb-3 row">                            
-                                <label  class="form-control-sm col-form-label col-md-2" for="correo"></label>                            
-                                <div class="col-sm-10">                                
-                                    <input required type="email" th:field="*{username}" class="form-control form-control-sm col-md-6" placeholder= "Direccion de correo" id="correo" aria-describedby="emailHelp">                            
-                                </div>                        
-                            </div>                       
-                            <div class="form-group mb-3 row">                            
-                                <label  class="form-control-sm  col-form-label col-md-2" for="contrasena"></label>                            
-                                <div class="col-sm-10">                                
-                                    <input required type="password" th:field="*{password}" class="form-control form-control-sm col-md-6" placeholder= "Contrasena" id="Contrasena" aria-describedby="emailHelp">                            
-                                </div>                        
-                            </div>
-                            <div class="form-group mb-3 row">                            
-                                <label  class="form-control-sm  col-form-label col-md-2" for="rol"></label>                            
-                                <div class="col-sm-10">                                
-                                    <select th:field="*{rol}" class="form-control form-control-sm col-md-6" id="Rol">  
-                                        <option value='ADMIN'>Administrador</option>
-                                        
-                                    </select>
-                                </div>                        
-                            </div> 
+                            
                             <div>          
                                 <button type="submit" class="btn btn-success" value="Guardar">Agregar</button>
                                 <button type="reset" class="btn btn-danger" value="Resetear">Resetear</button>    

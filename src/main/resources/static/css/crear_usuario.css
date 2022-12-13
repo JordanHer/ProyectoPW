@@ -74,6 +74,14 @@ body {
     color: white;
 }
 
+#btn_producto{
+    margin-left: 20px;
+    font-size: 15px;
+    outline: none;
+    text-decoration: none;
+    color: white;
+}
+
 #logoprincipal{
     margin-left: 50px;
     outline: none;

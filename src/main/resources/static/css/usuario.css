@@ -66,6 +66,14 @@ body {
     color: black;
 }
 
+#btn_producto{
+   margin-left: 20px;
+    font-size: 15px;
+    outline: none;
+    text-decoration: none;
+    color: black;
+}
+
 #btn_usuario{
     margin-left: 20px;
     font-size: 15px;
